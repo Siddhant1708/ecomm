@@ -94,7 +94,7 @@ export const loginController = async (req, res) => {
     res.status(200).send({
       success: true,
       message: "Logged in succesfully",
-      FoundUser: {
+      user: {
         name: user.name,
         email: user.email,
         phone: user.phone,
@@ -108,4 +108,9 @@ export const loginController = async (req, res) => {
       message: "Error is login",
     });
   }
+};
+
+///test controller
+export const testController = async (req, res) => {
+  return res.send("Admin");
 };
